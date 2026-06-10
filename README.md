@@ -69,7 +69,7 @@ RoBERTa-base comparte arquitectura con BERT-base (~125M parámetros) pero fue en
 ### Requisitos
 - Python 3.10+
 - GPU con al menos 16GB VRAM recomendado (probado en NVIDIA A100 80GB)
-- Cuenta en Vast.ai o similar para instancias GPU en la nube
+- Cuenta en Vast.ai o similar para instancias GPU en la nube (a una tasa de 0.59 USD/h, el costo total del experimento fue de 21.1 USD)
 
 ### Instalación
 ```bash
