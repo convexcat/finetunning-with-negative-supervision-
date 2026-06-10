@@ -135,11 +135,16 @@ NB4_resultados_analisis.ipynb      # Tablas y análisis final
 
 ## Conclusiones principales
 
-**Sobre la reproducción:** La supervisión negativa (AAN) produce mejoras consistentes en tareas con solapamiento semántico entre etiquetas. En SemEval (clasificación multi-etiqueta de emociones), AAN random mejora el baseline de BERT en +29.2% relativo, lo que replica la hipótesis central del paper. En MR (clasificación binaria), la mejora no se observa, posiblemente porque la tarea es suficientemente simple para que el encoder ya separe bien las clases.
+**Sobre la reproducción:** La supervisión negativa (AAN) produce mejoras consistentes en tareas con solapamiento semántico entre etiquetas. En SemEval (clasificación multi-etiqueta de emociones), AAN random mejora el baseline de BERT en +29.2% relativo, lo que replica la hipótesis central del paper. En MR (clasificación binaria), la mejora no se observa, posiblemente por dificultades en la inicialización, problemas particulares del flujo de entrenamiento que no se pueden esclarecer del artículo original, o la falta de muestras (pues en el artículo original se realizaron diez iteraciones de ajuste fino, contra las cinco que yo hago).
 
 **Sobre el hard negative mining:** La selección explícita de negativos difíciles mejora la estabilidad y el rendimiento, especialmente con encoders más fuertes. Con RoBERTa en SemEval, AAN random colapsa en alta varianza (std=0.056) mientras que AAN hard logra el mejor resultado general (0.2411) con varianza baja (std=0.007). Esto sugiere que la estrategia de muestreo es más crítica cuando el encoder ya produce representaciones de alta calidad.
 
-**Sobre RoBERTa:** RoBERTa supera a BERT en el baseline, pero los beneficios de AAN interactúan de forma compleja con la calidad del encoder. Solo la combinación RoBERTa + AAN hard mejora consistentemente sobre su propio baseline en ambos datasets, confirmando que hard mining y encoders fuertes son complementarios.
+**Sobre RoBERTa:** RoBERTa supera a BERT en el baseline, pero los beneficios de AAN interactúan de forma compleja con la calidad del encoder. Solo la combinación RoBERTa + AAN hard mejora consistentemente sobre su propio baseline en ambos datasets, mostrando que hard mining y encoders fuertes son complementarios.
+
+---
+
+## Nota
+Los Notebooks presentados son versiones finales limpias de lo que sería el flujo completo del experimento. Durante el desarrollo y obtención de resultados se usaron Notebooks distintos con diferencias importantes que no llegaron a la etapa final (por ejemplo, en un inicio se estaba desarrollando el entrenamiento con el Dataset de GoEmotions, pero se tuvo que descartar por cuestiones del costo de computo y tiempo), o se tuvieron errores de ejecución (por ejemplo, entornos desconectados), por lo cual fue necesario modificar progresivamente los notebooks para no tener que repetir etapas del experimento. En caso de requerir algunos de los Notebooks originales, escríbanme.
 
 ---
 
@@ -149,4 +154,3 @@ NB4_resultados_analisis.ipynb      # Tablas y análisis final
 - Devlin et al. (2019). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. NAACL 2019.
 - Liu et al. (2019). RoBERTa: A Robustly Optimized BERT Pretraining Approach. arXiv:1907.11692.
 - Mohammad et al. (2018). SemEval-2018 Task 1: Affect in Tweets. SemEval 2018.
-- Conneau & Kiela (2018). SentEval: An Evaluation Toolkit for Universal Sentence Representations. LREC 2018.
