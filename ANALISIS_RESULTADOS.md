@@ -63,4 +63,4 @@ La dirección general de los resultados es razonablemente consistente con el pap
 - Los experimentos se realizaron exclusivamente en inglés; el paper original incluye evaluación multilingüe (japonés y chino) que no se reprodujo.
 - No se evaluó clasificación a nivel de documento (dataset arXiv del paper original) debido a restricciones computacionales y de tiempo.
 - Un barrido de hiperparámetros (λ y n) podría haber tenido consecuencias en los resultados finales pero por restricciones de tiempo; se usaron los valores del paper (λ=1, n=4).
-- Con solo 5 trials y dos datasets, los valores finales y los hallazgos presentados no son tan concluyentes y robustos como el paper original.
+- Con solo 5 trials y dos datasets, los valores finales y los hallazgos presentados no son tan concluyentes y robustos como el artículo original.
