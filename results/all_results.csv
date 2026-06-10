@@ -1,0 +1,13 @@
+Encoder,Method,Dataset,Mean,Std,Best LR
+BERT-base,AAN (hard),MR,0.8127,0.0071,3e-05
+BERT-base,AAN (random),MR,0.8183,0.0038,3e-05
+BERT-base,Baseline,MR,0.823,0.007,1e-05
+RoBERTa-base,AAN (hard),MR,0.8521,0.0055,1e-05
+RoBERTa-base,AAN (random),MR,0.8346,0.0036,5e-05
+RoBERTa-base,Baseline,MR,0.8487,0.0038,1e-05
+BERT-base,AAN (hard),SEMEVAL,0.2205,0.0044,3e-05
+BERT-base,AAN (random),SEMEVAL,0.2275,0.0008,3e-05
+BERT-base,Baseline,SEMEVAL,0.1761,0.0142,1e-05
+RoBERTa-base,AAN (hard),SEMEVAL,0.2411,0.0071,1e-05
+RoBERTa-base,AAN (random),SEMEVAL,0.1883,0.056,1e-05
+RoBERTa-base,Baseline,SEMEVAL,0.2016,0.0025,1e-05
